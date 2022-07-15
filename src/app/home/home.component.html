@@ -1,0 +1,35 @@
+<div class="container content">
+    <div class="row">
+        <h2> Electricty Bills</h2>
+    </div>
+
+    <div class="row">
+        <table class="table">
+            <thead>
+                <tr>
+                    <td scope="col">#</td>
+                    <td scope="col">Consumer ID</td>
+                    <td scope="col">Consumer Name</td>
+                    <td scope="col">Units Consumed</td>
+                    <td scope="col">Amount</td>
+                    <td scope="col">Bill Date</td>
+                    <td scope="col">Paid Date</td>
+                    <td scope="col">View</td>
+                </tr>
+            </thead>
+
+            <tbody *ngFor="let bill of allBills">
+                <tr>
+                    <td>{{bill.bill_id}}</td>
+                    <td>{{bill.consumer_id}} </td>
+                    <td>{{bill.consumer_name}} </td>
+                    <td>{{bill.units_consumed}} </td>
+                    <td>{{bill.amount}}</td>
+                    <td>{{bill.bill_date}}</td>
+                    <td>{{bill.paid_date}} </td>
+                    <td><button class="btn btn-primary" onclick="">View</button> </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
